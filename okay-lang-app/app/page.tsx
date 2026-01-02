@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import Link from "next/link";
 
 export default function LandingPage() {
 
@@ -34,9 +34,9 @@ export default function LandingPage() {
 
       {/* Buttons */}
       <div className="w-full px-3 flex flex-col gap-8">
-        <button className="w-full bg-[#F9F9F9] py-5 text-charcoal rounded-[124px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] active:shadow-none active:translate-y-0.5 transition-all">
+        <Link href="/generate-key" className="w-full bg-[#F9F9F9] py-5 text-charcoal rounded-[124px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] active:shadow-none active:translate-y-0.5 transition-all text-center">
           Start new journey
-        </button>
+        </Link>
         
         <form onSubmit={handleSubmit}>
           <p className="text-[12px] text-charcoal opacity-60">— or continue with existing key —</p> 
@@ -46,7 +46,7 @@ export default function LandingPage() {
             placeholder="Paste Key here" 
             value={key} 
             onChange={(e) => setKey(e.target.value)} 
-            className="w-full bg-white rounded-xl p-3 placeholder:text-[#33333350]">
+            className="w-full bg-white rounded-xl p-3 placeholder:text-[#33333350] text-charcoal outline-none focus:border border-[#AEC6CF]">
             </input>
             <button type="submit" className="p-4 rounded-full bg-[#AEC6CF]">
               <img src="/svg/arrow.svg" alt="" />
