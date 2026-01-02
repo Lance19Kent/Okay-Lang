@@ -14,7 +14,7 @@ export default function LandingPage() {
   return (
       <>
         <div className="h-screen flex flex-col justify-between pb-15">
-          <div className=" w-full flex flex-col items-center">
+          <div className=" w-full flex flex-col items-center px-3">
             <h1 className="text-[36px] text-charcoal">Hinga muna.</h1>
             <p className="text-[12px] text-charcoal opacity-50 text-center">A gentle space where people can check in with themselves without pressure, explanation, or judgment.</p>
             <img src="/svg/landing-vector.svg"></img>
