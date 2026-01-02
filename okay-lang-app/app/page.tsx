@@ -12,7 +12,7 @@ export default function LandingPage() {
   }
 
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#FFFCEC] from-50% to-[#FFEA73] to-77% flex flex-col items-center gap-18">
+    <main className="h-screen bg-linear-to-b from-[#FFFCEC] from-50% to-[#FFEA73] to-77% flex flex-col items-center gap-18">
       {/* Logo Icons */}
       <header className="w-full h-12.5 p-3 flex items-center justify-between">
         <div className="flex items-center">
@@ -22,7 +22,10 @@ export default function LandingPage() {
         <img src="/svg/i-icon.svg" alt="Information Logo"></img>
       </header>
 
-      {/* Main Body */}
+
+
+      <div className="h-screen flex flex-col justify-between pb-15">
+              {/* Main Body */}
       <div className=" w-full flex flex-col items-center px-3">
         <h1 className="text-[36px] text-[#333333]">Hinga muna.</h1>
         <p className="text-[12px] text-[#333333] opacity-50 text-center">A gentle space where people can check in with themselves without pressure, explanation, or judgment.</p>
@@ -36,21 +39,23 @@ export default function LandingPage() {
         </button>
         
         <form onSubmit={handleSubmit}>
-          <p className="text-[12px] text-[#333333] opacity-60">— or continue with existing key —</p>
+          <p className="text-[12px] text-[#333333] opacity-60">— or continue with existing key —</p> 
           <div className="flex gap-5 px-2">
             <input 
             type="text" 
             placeholder="Paste Key here" 
             value={key} 
             onChange={(e) => setKey(e.target.value)} 
-            className="w-full bg-white rounded-xl p-3">
+            className="w-full bg-white rounded-xl p-3 placeholder:text-[#33333350]">
             </input>
-            <button type="submit" className="p-3 rounded-full bg-[#AEC6CF]">
+            <button type="submit" className="p-4 rounded-full bg-[#AEC6CF]">
               <img src="/svg/arrow.svg" alt="" />
             </button>
           </div>
         </form>
       </div>
+      </div>
+
     </main>
   );
 }
