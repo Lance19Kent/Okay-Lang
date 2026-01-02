@@ -13,17 +13,6 @@ export default function LandingPage() {
 
   return (
     <main className="h-screen bg-linear-to-b from-[#FFFCEC] from-50% to-[#FFEA73] to-77% flex flex-col items-center gap-18">
-      {/* Logo Icons */}
-      <header className="w-full h-12.5 p-3 flex items-center justify-between">
-        <div className="flex items-center">
-          <img src="/svg/okay-lang-logo.svg" alt="Okay Lang App Logo"></img>
-          <h1 className="text-charcoal text-[16px]">Okay Lang</h1>
-        </div>
-        <img src="/svg/i-icon.svg" alt="Information Logo"></img>
-      </header>
-
-
-
       <div className="h-screen flex flex-col justify-between pb-15">
               {/* Main Body */}
       <div className=" w-full flex flex-col items-center px-3">
