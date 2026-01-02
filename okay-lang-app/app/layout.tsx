@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Quicksand } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "../src/components/Header";
+
 
 const quicksand = Quicksand({
   subsets: ["latin"],
   weight:["300", "400", "500", "600", "700"],
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,12 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
-        className={`antialiased`}
+        className={`${quicksand.className} antialiased `}
       >
+        <main className="h-screen bg-linear-to-b from-[#FFFCEC] from-50% to-[#FFEA73] to-77% gap-18 flex-1 flex flex-col items-center">
         <Header/>
         {children}
+        </main>
       </body>
     </html>
   );
